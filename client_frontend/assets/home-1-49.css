@@ -1,0 +1,22 @@
+.abs-root{
+  /* The Figma root frame is at (-1010, -1006) so we map child absolute positions by shifting:
+     In this HTML we already used translated positive values, so no transform needed here. */
+  left:0;
+  top:0;
+}
+
+/* No additional classes are required as inline styles preserve precise px positions from the JSON.
+
+   If responsiveness is desired while preserving aspect, we can scale the canvas:
+*/
+@media (max-width: 430px){
+  .screen-canvas{
+    width:100vw;
+    height:calc(100vw * (932/430));
+    transform-origin: top left;
+    transform: scale(calc(100vw / 430));
+  }
+  body, html{
+    overflow-x:hidden;
+  }
+}

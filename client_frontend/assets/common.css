@@ -1,0 +1,91 @@
+:root{
+  /* Colors */
+  --color-ffffff:#ffffff;
+  --color-3c2f2f:#3c2f2f;
+  --color-6a6a6a:#6a6a6a;
+  --color-d9d9d9:#d9d9d9;
+  --color-ef2a39:#ef2a39;
+  --color-f5f5f5:#f5f5f5;
+  --color-f3f4f6:#f3f4f6;
+  --color-000000:#000000;
+  --color-ff9633:#ff9633;
+
+  /* Typography tokens (sizes/line-heights/weights) */
+  --font-lobster:'Lobster', cursive;
+  --font-poppins:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-roboto:'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  --font-inter:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --typo-5-size:45px; --typo-5-lh:60.6093788147px; --typo-5-weight:400; --typo-5-color:var(--color-3c2f2f);
+  --typo-6-size:18px; --typo-6-lh:27px; --typo-6-weight:500; --typo-6-color:var(--color-6a6a6a);
+  --typo-7-size:18px; --typo-7-lh:21.09375px; --typo-7-weight:500; --typo-7-color:var(--color-3c2f2f);
+  --typo-8-size:16px; --typo-8-lh:19.3636360168px; --typo-8-weight:500; --typo-8-color:var(--color-f5f5f5);
+  --typo-9-size:16px; --typo-9-lh:19.3636360168px; --typo-9-weight:500; --typo-9-color:var(--color-6a6a6a);
+  --typo-10-size:16px; --typo-10-lh:19.3636360168px; --typo-10-weight:500; --typo-10-color:var(--color-3c2f2f);
+  --typo-11-size:16px; --typo-11-lh:21.5500011444px; --typo-11-weight:500; --typo-11-color:var(--color-3c2f2f);
+
+  /* Radius */
+  --radius-20:20px;
+  --radius-35:35px;
+
+  /* Shadows mapped from DS */
+  --shadow-0: 0px 4px 19px 0px rgba(0,0,0,1);
+  --shadow-1: 0px 10px 18px -1px rgba(0,0,0,1);
+  --shadow-2: 0px 6px 17px 0px rgba(0,0,0,1);
+  --shadow-3: 0px 5px 16px 5px rgba(0,0,0,1);
+}
+
+/* Reset-ish */
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--color-ffffff);}
+
+/* Base canvas for screens */
+.screen-canvas{
+  position:relative;
+  width:430px;
+  height:932px;
+  background:var(--color-ffffff);
+  border-radius:var(--radius-35);
+  overflow:hidden;
+}
+
+/* Utility for absolute positioned nodes using figma coordinates */
+.abs{position:absolute;}
+
+/* Text style helpers (kept explicit to avoid ambiguity) */
+.typo-5{font-family:var(--font-lobster); font-size:var(--typo-5-size); line-height:var(--typo-5-lh); font-weight:var(--typo-5-weight); color:var(--typo-5-color);}
+.typo-6{font-family:var(--font-poppins); font-size:var(--typo-6-size); line-height:var(--typo-6-lh); font-weight:var(--typo-6-weight); color:var(--typo-6-color);}
+.typo-7{font-family:var(--font-roboto); font-size:var(--typo-7-size); line-height:var(--typo-7-lh); font-weight:var(--typo-7-weight); color:var(--typo-7-color);}
+.typo-8{font-family:var(--font-inter); font-size:var(--typo-8-size); line-height:var(--typo-8-lh); font-weight:var(--typo-8-weight); color:var(--typo-8-color);}
+.typo-9{font-family:var(--font-inter); font-size:var(--typo-9-size); line-height:var(--typo-9-lh); font-weight:var(--typo-9-weight); color:var(--typo-9-color);}
+.typo-10{font-family:var(--font-inter); font-size:var(--typo-10-size); line-height:var(--typo-10-lh); font-weight:var(--typo-10-weight); color:var(--typo-10-color);}
+.typo-11{font-family:var(--font-roboto); font-size:var(--typo-11-size); line-height:var(--typo-11-lh); font-weight:var(--typo-11-weight); color:var(--typo-11-color);}
+
+/* Style tokens (backgrounds, radii) */
+.bg-3c2f2f{background:var(--color-3c2f2f);}
+.bg-6a6a6a{background:var(--color-6a6a6a);}
+.bg-d9d9d9{background:var(--color-d9d9d9);}
+.bg-ef2a39{background:var(--color-ef2a39);}
+.bg-f5f5f5{background:var(--color-f5f5f5);}
+.bg-f3f4f6{background:var(--color-f3f4f6);}
+.bg-000000{background:var(--color-000000);}
+.bg-ff9633{background:var(--color-ff9633);}
+.bg-ffffff{background:var(--color-ffffff);}
+
+.radius-20{border-radius:var(--radius-20);}
+.radius-35{border-radius:var(--radius-35);}
+
+/* Shadow helpers */
+.shadow-0{box-shadow:var(--shadow-0);}
+.shadow-1{box-shadow:var(--shadow-1);}
+.shadow-2{box-shadow:var(--shadow-2);}
+.shadow-3{box-shadow:var(--shadow-3);}
+
+/* Ellipse helper using border-radius 50% */
+.ellipse{border-radius:50%;}
+
+/* Accessibility helpers */
+.visually-hidden{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;}
+
+/* For icon placeholders where vector paths are not provided */
+.icon-box{display:block;}
